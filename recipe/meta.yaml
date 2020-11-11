@@ -24,7 +24,7 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - pytorch >=1.6.0
+    - pytorch
     - scikit-learn
     - tensorboardx
     - tqdm
