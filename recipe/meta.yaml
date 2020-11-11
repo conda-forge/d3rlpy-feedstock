@@ -10,7 +10,7 @@ source:
   sha256: 808ff3094b0e59ff373213a02034158f798d1a5c378ab5de222629148267676b
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -24,7 +24,7 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - pytorch
+    - pytorch==1.6.0
     - scikit-learn
     - tensorboardx
     - tqdm
@@ -36,6 +36,7 @@ requirements:
 test:
   imports:
     - d3rlpy
+    - d3rlpy.dataset
 
 about:
   home: https://github.com/takuseno/d3rlpy
