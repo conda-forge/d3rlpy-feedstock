@@ -1,5 +1,5 @@
 {% set name = "d3rlpy" %}
-{% set version = "0.40" %}
+{% set version = "0.41" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4f2a7cdfba43b07f2a762b51837c69c7a3621d7b4c7d0354a9d0755a0dbeb6dd
+  sha256: 511ae1a4d7ea338dadd5f7b7f72613af141c884d45b3ed3c89294a3d4a5b3fd3
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -43,7 +43,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'A data-driven deep reinforcement learning library as an out-of-the-box tool'
+  summary: A data-driven deep reinforcement learning library as an out-of-the-box tool
 
   description: |
     d3rlpy is a Python library providing the state-of-the-art data-driven deep
