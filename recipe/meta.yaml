@@ -33,6 +33,7 @@ requirements:
     - gym
     - kornia
     - click
+    - typing-extensions
 
 test:
   imports:
