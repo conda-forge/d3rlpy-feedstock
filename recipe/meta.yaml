@@ -11,7 +11,7 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -43,7 +43,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'A data-driven deep reinforcement learning library as an out-of-the-box tool'
+  summary: A data-driven deep reinforcement learning library as an out-of-the-box tool
 
   description: |
     d3rlpy is a Python library providing the state-of-the-art data-driven deep
