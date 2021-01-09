@@ -1,5 +1,5 @@
 {% set name = "d3rlpy" %}
-{% set version = "0.41" %}
+{% set version = "0.50" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 511ae1a4d7ea338dadd5f7b7f72613af141c884d45b3ed3c89294a3d4a5b3fd3
+  sha256: 8d5d9117a351f8b27945f0f6f2f82e3db435e32854b5b8b9c9e7d0565bbbe820
 
 build:
   number: 0
@@ -32,6 +32,8 @@ requirements:
     - h5py
     - gym
     - kornia
+    - click
+    - typing-extensions
 
 test:
   imports:
