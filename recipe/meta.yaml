@@ -1,5 +1,5 @@
 {% set name = "d3rlpy" %}
-{% set version = "0.51" %}
+{% set version = "0.60" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8b4ce377ac02a1f66fc2cd589ef50f53122026e2752e7ccb250ac70b915fd0f5
+  sha256: 990c3c8a3a2cdb0043228931a1342dee938d165659402b2b4e445a44a3e542bb
 
 build:
   number: 0
@@ -24,16 +24,18 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - pytorch
+    - pytorch==1.5.0
     - scikit-learn
     - tensorboardx
     - tqdm
     - gputil
     - h5py
     - gym
-    - kornia
+    - kornia==0.3.1
     - click
     - typing-extensions
+    - scipy
+    - cloudpickle
 
 test:
   imports:
