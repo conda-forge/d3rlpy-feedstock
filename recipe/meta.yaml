@@ -24,14 +24,14 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - pytorch==1.5.0
+    - pytorch ==1.5.0
     - scikit-learn
     - tensorboardx
     - tqdm
     - gputil
     - h5py
     - gym
-    - kornia==0.3.1
+    - kornia ==0.3.1
     - click
     - typing-extensions
     - scipy
