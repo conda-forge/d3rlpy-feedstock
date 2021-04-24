@@ -1,5 +1,5 @@
 {% set name = "d3rlpy" %}
-{% set version = "0.70" %}
+{% set version = "0.80" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8b3d4da7bbdf72a8425d48e820cc48591afa02c1ab505be1b6369f86784729b3
+  sha256: 3066bd0b9618375ce593a94320f5597ae63ff566e0f5d6507153d51fd92b5b3e
 
 build:
   number: 0
