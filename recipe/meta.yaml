@@ -31,7 +31,6 @@ requirements:
     - gputil
     - h5py
     - gym
-    - kornia
     - click
     - typing-extensions
     - structlog
