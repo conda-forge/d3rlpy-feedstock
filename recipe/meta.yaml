@@ -1,5 +1,5 @@
 {% set name = "d3rlpy" %}
-{% set version = "1.1.1" %}
+{% set version = "2.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,34 +7,28 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7970c2c67320e0e619bc851d072f59b949ec4c5b2a8c0d82b83790d96bccd882
+  sha256: 643c4ce11411d32730bf5f7a78e077106023eeea297d880742f75d8f7fae95a5
 
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [win and py>=39]
 
 requirements:
-  build:
-    - {{ compiler('cxx') }}
   host:
     - python
     - pip
-    - numpy
-    - Cython
   run:
     - python
     - {{ pin_compatible('numpy') }}
     - pytorch
-    - tensorboardx
     - tqdm
-    - gputil
     - h5py
-    - gym
+    - gym >=0.26.0
     - click
     - typing-extensions
     - structlog
     - colorama
+    - dataclasses-json
 
 test:
   imports:
@@ -46,7 +40,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: A data-driven deep reinforcement learning library as an out-of-the-box tool
+  summary: An offline deep reinforcement learning library.
 
   description: |
     d3rlpy is a Python library providing the state-of-the-art data-driven deep
