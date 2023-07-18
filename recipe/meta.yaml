@@ -23,7 +23,7 @@ requirements:
     - pytorch
     - tqdm
     - h5py
-    - gym>=0.26.0
+    - gym >=0.26.0
     - click
     - typing-extensions
     - structlog
