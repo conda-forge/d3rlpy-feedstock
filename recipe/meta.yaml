@@ -30,7 +30,7 @@ requirements:
     - structlog
     - colorama
     - dataclasses-json
-    - gymnasium >= 1.0.0
+    - gymnasium >=1.0.0
 
 test:
   imports:
