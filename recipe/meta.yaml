@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
     - pip
   run:
-    - python >=3.8
+    - python >=3.9
     - {{ pin_compatible('numpy') }}
-    - pytorch >=2.0.0
+    - pytorch >=2.5.0
     - tqdm
     - h5py
     - gym >=0.26.0
@@ -30,7 +30,7 @@ requirements:
     - structlog
     - colorama
     - dataclasses-json
-    - gymnasium
+    - gymnasium >= 1.0.0
 
 test:
   imports:
