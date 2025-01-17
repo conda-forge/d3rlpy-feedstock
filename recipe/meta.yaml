@@ -10,17 +10,17 @@ source:
   sha256: 1b2ff13c272cf7b1f7c0b7124fc3fd134c248447f6637578bb3a47197e4bf71f
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - {{ pin_compatible('numpy') }}
     - pytorch >=2.5.0
     - tqdm
@@ -34,6 +34,8 @@ requirements:
     - gymnasium >=1.0.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - d3rlpy
     - d3rlpy.dataset
